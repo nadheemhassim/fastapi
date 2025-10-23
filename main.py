@@ -6,7 +6,7 @@ from openpyxl import load_workbook
 
 app = FastAPI(title="Streaming Excel Filter API", version="1.3")
 
-DATASET_1 = "/Users/geethakumuduni/Desktop/fastapi/data/APP - AR Analysis.xlsx"
+DATASET_1 = ""
 
 def stream_excel_in_chunks(file_path: str, sheet_name: str = None, chunk_size: int = 5000) -> Generator[pd.DataFrame, None, None]:
     wb = load_workbook(filename=file_path, read_only=True, data_only=True)
